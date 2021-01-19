@@ -1,0 +1,35 @@
+<!-- <h2>{{errorText}}</h2>
+<input type="text" placeholder="Email" #email>
+<input type="password" placeholder="Password" #password>
+<button (click)="login(email.value, password.value)">Auth</button>
+<a [routerLink]="['/register']">Нет аккаунта? - Зарегестрироватся.</a> -->
+<div class="auth">
+    <div class="container">
+        <div class="container-inner">
+            <div class="container-inner-inner">
+                <div class="container-inner-inner-inner">
+                    <div class="auth-h1">
+                        <div class="auth-h1-h1">
+                            <h1>Авторизация</h1>
+                        </div>
+                    </div>
+                    <div class="inputs">
+                        <div class="inputs-input">
+                            <p>Введите E-Mail:</p>
+                            <input type="text" placeholder="Введите E-Mail" #email>
+                        </div>
+                        <div class="inputs-input">
+                            <p>Введите Пароль:</p>
+                            <input type="password" placeholder="Введите пароль" #password>
+                        </div>
+                        <div class="container-a"><div class="container-inner-a"><a (click)="login(email.value, password.value)">Авторизоваться</a></div></div>
+                        <div class="register">
+                            <a [routerLink]="['/register']">Нет аккаунта? - Зарегестрироваться.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="/assets/img/auth-background.png" alt="">
+</div>

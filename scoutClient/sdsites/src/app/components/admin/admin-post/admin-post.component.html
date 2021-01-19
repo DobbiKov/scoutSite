@@ -1,0 +1,41 @@
+<div class="new-post">
+  <img src="/assets/img/blog-header.png" alt="">
+  <div class="text">
+  </div>
+  <div class="container">
+      <div class="container-inner">
+          <div class="container-inner-inner">
+
+            <div class="container-h1">
+              <h1>Создание новости</h1>
+            </div>
+
+            <div class="container-name cont-main">
+              <p>Введите название:</p>
+              <input type="text" placeholder="Введите заголовок нового поста" #title>
+              <p class="now">В данный момент: {{post.title}}</p>
+            </div>
+            <div class="container-descr cont-main">
+              <p>Введите краткое описание:</p>
+              <input type="text" placeholder="Краткое описание" #stext>
+              <p class="now">В данный момент: {{post.shortText}}</p>
+            </div>
+            <div class="container-text cont-main">
+              <p>Пишите текст:</p>
+              <textarea name="text" #text></textarea>
+              <p class="now">В данный момент: {{post.text}}</p>
+            </div>
+            <div class="container-a"><div class="container-inner-a"><a (click)="newPost(title.value, stext.value, text.value)">Обновить</a></div></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- <input type="text" placeholder="Введите заголовок" #title>
+<p>В данный момент: {{post.title}}</p>
+<input type="text" placeholder="Краткое описание" #stext>
+<p>В данный момент: {{post.shortText}}</p>
+<input type="text" placeholder="Введите текст" #text>
+<p>В данный момент: {{post.text}}</p>
+<button (click)="newPost(title.value, stext.value, text.value)">Update</button> -->

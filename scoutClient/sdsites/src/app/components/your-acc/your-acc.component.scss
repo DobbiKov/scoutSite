@@ -1,0 +1,183 @@
+.your-acc{
+    .your-acc-header{
+        position: relative;
+        width: 100%;
+        .your-acc-header-h1{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            .your-acc-header-h1-inner{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 80%;
+                height: 100%;
+                margin: auto;
+                .your-acc-header-h1-inner-h1{
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                    margin: auto 0;
+                    h1{
+                        max-width: 70px;
+                        border-top: 3px solid black;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 900;
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+    nav{
+        display: block;
+        position: relative;
+        .nav{
+            display: block;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .block{
+        background-color: #EEEDED;
+        position: relative;
+        width: 100%;
+        .block-inner{
+            padding-top: 70px;
+            padding-bottom: 60px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            .container-1{
+                width: 20%;
+                display: block;
+                background-color: #fff;
+                .container-1-child{
+                    width: 100%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #808080;
+                    .container-1-child-inner{
+                        width: 90%;
+                        margin: auto;
+                        display: flex;
+                        justify-content: space-between;
+                        h2{
+                            text-align: center;
+                            margin: auto;
+                            font-family: 'Roboto', sans-serif;
+                            font-weight: 700;
+                            font-size: 25px;
+                        }
+                        .logout{
+                          padding: 5px 5px 5px 5px;
+                          transition: 0.3s;
+                        }
+                        .logout:hover{
+                            cursor: pointer;
+                            background-color: black;
+                            color: white;
+                            border-radius: 15px;
+                        }
+                        .container-1-child-inner-p{
+                            position: relative;
+                            display: block;
+                            p{
+                                position: relative;
+                                display: block;
+                                white-space: nowrap;
+                                font-family: 'Roboto', sans-serif;
+                                font-weight: 500;
+                                font-size: 15px;
+                            }
+                            .container-1-child-p2{
+                                color: #725F5F;
+                            }
+                        }
+                    }
+                }
+            }
+            .container-2{
+                display: block;
+                width: 70%;
+                .container-1-child{
+                    width: 100%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #808080;
+                    .container-1-child-inner{
+                        width: 100%;
+                        margin: auto;
+                        display: flex;
+                        justify-content: space-between;
+                        h2{
+                            font-family: 'Roboto', sans-serif;
+                            font-weight: 700;
+                            font-size: 25px;
+                        }
+                        .logout:hover{
+                            cursor: pointer;
+                            background-color: black;
+                            color: white;
+                            border-radius: 15px;
+                            padding: 5px 5px 5px 5px;
+                        }
+                        .container-1-child-inner-p{
+                            position: relative;
+                            display: block;
+                            p{
+                                position: relative;
+                                display: block;
+                                white-space: nowrap;
+                                font-family: 'Roboto', sans-serif;
+                                font-weight: 500;
+                                font-size: 15px;
+                            }
+                            .container-1-child-p2{
+                                color: #725F5F;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px){
+    .your-acc{
+        .your-acc-header{
+            .your-acc-header-h1{
+                .your-acc-header-h1-inner{
+                    .your-acc-header-h1-inner-h1{
+                        h1{
+                            max-width: 180px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .block{
+            .block-inner{
+                display: block;
+                .container-1{
+                    width: 100%;
+                }
+                .container-2{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

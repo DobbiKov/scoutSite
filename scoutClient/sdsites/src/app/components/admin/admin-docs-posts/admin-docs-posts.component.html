@@ -1,0 +1,42 @@
+<!-- <div *ngFor="let post of posts;" class="posts">
+    <p>{{post.name}}</p>
+    <button (click)="redirect(post.id)">More</button>
+</div> -->
+<div *ngIf="isLoggedIn == true" class="docs-main">
+  <div class="header">
+      <div class="text">
+          <div class="text-inner">
+              <div class="text-inner-h1">
+                  <a (click)="createPost()">Создать</a>
+                  <h1>Документация</h1>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="container-inner">
+          <div *ngFor="let post of posts;" class="post-container">
+              <div class="post">
+                  <div class="post-inner">
+                      <h1>{{post.name}}</h1>
+                      <p>{{post.text}}</p>
+                  </div>
+                  <!-- <button (click)="redirectSeen(post.id)">Смотреть</button> -->
+                  <div class="container-a"><div class="container-inner-a"><a (click)="redirect(post.id)">Читать</a></div></div>
+                  <div class="container-a"><div class="container-inner-a"><a (click)="edit(post.id)">Редактировать</a></div></div>
+                  <div class="container-a"><div class="container-inner-a"><a (click)="delete(post.id)">Удалить</a></div></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div *ngIf="isLoggedIn == false">
+  <h1>Вы не авторизованы!</h1>
+</div>
+<!-- <button (click)="createPost()">Create</button>
+<div *ngFor="let post of posts;" class="posts">
+    <p>{{post.name}}</p>
+    <button (click)="redirect(post.id)">More</button>
+    <button (click)="edit(post.id)">Edit</button>
+    <button (click)="delete(post.id)">Delete</button>
+</div> -->

@@ -1,0 +1,22 @@
+<header>
+  <nav>
+    <div class="nav">
+      <div class="logo-div">
+        <div class="logo-div-inner">
+          <a [routerLink]="['/']" (click)="clickActive(1)"><img src="/assets/img/scout-logo-nav.png" alt="ScoutLogo" class="scout-logo-img"></a>
+        </div>
+      </div>
+      <div class="buttons-div">
+        <div class="buttons-div-inner">
+          <div class="buttons-div-a"><a [routerLink]="['/']" [class.active]="activeComp == 1" (click)="clickActive(1)">Главная</a></div>
+          <div class="buttons-div-a"><a [routerLink]="['/about']" [class.active]="activeComp == 2" (click)="clickActive(2)">О нас</a></div>
+          <div class="buttons-div-a"><a [routerLink]="['/news']" [class.active]="activeComp == 3" (click)="clickActive(3)">Блог</a></div>
+          <div class="buttons-div-a" *ngIf='isLoggedIn == false'><a [routerLink]="['/auth']" [class.active]="activeComp == 5" (click)="clickActive(5)">Войти</a></div>
+          <div class="buttons-div-a" *ngIf='isLoggedIn == true'><a [routerLink]="['/youracc']" [class.active]="activeComp == 6" (click)="clickActive(6)">Личный кабинет</a></div>
+          <div class="buttons-div-a" *ngIf='isLoggedIn == true && isAdmin == true'><a [routerLink]="['/admin']" [class.active]="activeComp == 7" (click)="clickActive(7)">Admin panel</a></div>
+        </div>
+        <!-- <a [routerLink]="['/auth']" *ngIf='isLoggedIn == true'>{{name}}</a> -->
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,42 @@
+<div class="new-post">
+  <img src="/assets/img/blog-header.png" alt="">
+  <div class="text">
+  </div>
+  <div class="container">
+      <div class="container-inner">
+          <div class="container-inner-inner">
+
+            <div class="container-h1">
+              <h1>Создание мероприятия</h1>
+            </div>
+
+            <div class="container-name cont-main">
+              <p>Введите название:</p>
+              <input type="text" placeholder="Введите название мероприятия" #name>
+            </div>
+            <div class="container-type cont-main">
+              <p>Введите тип мероприятия:</p>
+              <input type="text" placeholder="Введите тип мероприятия" #type>
+            </div>
+            <div class="container-date cont-main">
+              <p>{{dateStatus}}</p>
+              <input type="text" placeholder="Введите дату проведения мероприятия в формате 12/23/2020" #date>
+            </div>
+            <div class="container-descr cont-main">
+              <p>Введите описание мероприятия:</p>
+              <textarea name="text" #text></textarea>
+            </div>
+            <div class="container-a"><div class="container-inner-a"><a (click)="create(name.value, text.value, type.value, date.value)">Создать</a></div></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<!-- <input type="text" placeholder="Введите название мероприятия" #name>
+<input type="text" placeholder="Введите описание мероприятия" #text>
+<input type="text" placeholder="Введите тип мероприятия" #type>
+<input type="text" placeholder="Введите дату проведения мероприятия в формате 01.09.1983" #date>
+<button (click)="create(name.value, text.value, type.value, date.value)">Create</button> -->

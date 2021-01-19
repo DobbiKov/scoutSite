@@ -1,0 +1,51 @@
+<div *ngIf="isAdmin == true" class="blog-main">
+    <div class="header">
+        <div class="create-new">
+          <div class="create-new-inner">
+            <a [routerLink]="['/admins/new/news']">Создать новость</a>
+          </div>
+        </div>
+        <div class="text">
+            <div class="text-inner">
+                <div class="text-inner-h1">
+                    <h1>Блог</h1>
+                </div>
+            </div>
+        </div>
+        <!-- <img src="/assets/img/blog-header.png" alt=""> -->
+    </div>
+    <div class="container">
+        <div class="container-inner">
+            <div *ngFor="let post of posts;" class="post-container">
+                <div class="post">
+                    <div class="post-inner">
+                        <h1>{{post.title}}</h1>
+                        <p>{{post.shortText}}</p>
+                    </div>
+                    <!-- <button (click)="redirectSeen(post.id)">Смотреть</button> -->
+                    <div class="container-a"><div class="container-inner-a"><a (click)="redirectSeen(post.id)">Читать</a></div></div>
+                    <div class="container-a"><div class="container-inner-a"><a (click)="redirect(post.id)">Редактировать</a></div></div>
+                    <div class="container-a"><div class="container-inner-a"><a (click)="delete(post.id)">Удалить</a></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="isAdmin == false">
+  <h1>Сюда тебе нельзя!</h1>
+</div>
+
+<!-- <div *ngIf="isAdmin == true">
+    <a [routerLink]="['/admins/new/news']">Создать новость</a>
+    <h1>Новости:</h1>
+    <div *ngFor="let post of posts;">
+        <h1>{{post.title}}</h1>
+        <h1>{{post.shortText}}</h1>
+        <button (click)="redirectSeen(post.id)">Смотреть</button>
+        <button (click)="redirect(post.id)">Редактировать</button>
+        <button (click)="delete(post.id)">Удалить</button>
+    </div>
+</div>
+<div *ngIf="isAdmin == false">
+    <h1>Сюда тебе нельзя!</h1>
+</div> -->

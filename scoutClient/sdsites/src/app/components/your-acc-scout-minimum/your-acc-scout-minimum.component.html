@@ -1,0 +1,21 @@
+<div *ngIf="isLoggedIn">
+    <h1>Ваш скаутский минимум:</h1>
+    <div *ngFor="let min of minimum; let i = index;">
+        <div *ngIf="min.id == 1">
+            <div style="padding-top: 40px;">
+                <h1 *ngIf="min.key == 'iScout1'">Я - Скаут:</h1>
+                <h1 *ngIf="min.key == 'natureLife1'">Життя на природi:</h1>
+                <h1 *ngIf="min.key == 'lifeInSociety1'">Життя в супiльствi:</h1>
+                <h1 *ngIf="min.key == 'iGood1'">Я - Молодець:</h1>
+                <p>{{min.id}}.{{min.value}}</p>
+                <div><span *ngIf="!scoutMinimum[i].value" style="color: red;">Не сдано</span><span *ngIf="scoutMinimum[i].value" style="color: green;">Сдано</span></div>
+            </div>
+        </div>
+        <div *ngIf="min.id != 1">
+            <div>
+                <p>{{min.id}}.{{min.value}}</p>
+                <div><span *ngIf="!scoutMinimum[i].value" style="color: red;">Не сдано</span><span *ngIf="scoutMinimum[i].value" style="color: green;">Сдано</span></div>
+            </div>
+        </div>
+    </div>
+</div>

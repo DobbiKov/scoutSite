@@ -1,0 +1,11 @@
+<div class="nav">
+    <div class="nav-inner">
+        <nav>
+            <div class="nav-a"><a [routerLink]="['/youracc']" [class.active]="activeComp == 6" (click)="clickActive(6)">Аккаунт</a></div>
+            <div class="nav-a"><a [routerLink]="['/editmyacc']" [class.active]="activeComp == 1" (click)="clickActive(1)">Редактировать информацию</a></div>
+            <div class="nav-a"><a [routerLink]="['/youracc/scout-minimum']" [class.active]="activeComp == 2" (click)="clickActive(2)">Скаутский минимум</a></div>
+            <div class="nav-a"><a [routerLink]="['/youracc/now-events']" [class.active]="activeComp == 4" (click)="clickActive(4)">Мероприятия</a></div>
+            <div class="nav-a"><a [routerLink]="['/docs']" [class.active]="activeComp == 5" (click)="clickActive(5)">Документация</a></div>
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+<!-- <div *ngIf="isLoggedIn">
+    <h1>Редактирование вашего аккаунта:</h1>
+    <div class="component">
+        <p>{{firstNameStatus}}</p>
+        <input type="text" placeholder="Введите имя:" #firstname>
+        <button (click)="update(0, firstname.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{lastNameStatus}}</p>
+        <input type="text" placeholder="Введите фамилию:" #lastName>
+        <button (click)="update(1, lastName.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{forestNameStatus}}</p>
+        <input type="text" placeholder="Введите лесное имя:" #forestname>
+        <button (click)="update(2, forestname.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{homeAdressStatus}}</p>
+        <input type="text" placeholder="Введите ваш адресс:" #homeAdress>
+        <button (click)="update(3, homeAdress.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{schoolStatus}}</p>
+        <input type="text" placeholder="Введите место работы/учебы:" #school>
+        <button (click)="update(4, school.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{classStatus}}</p>
+        <input type="text" placeholder="Введите ваш класс(если учитесь в школе):" #class>
+        <button (click)="update(5, class.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{phoneNumberStatus}}</p>
+        <input type="text" placeholder="Введите номер телефона:" #phoneNumber>
+        <button (click)="update(6, phoneNumber.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{passportStatus}}</p>
+        <input type="text" placeholder="Введите номер пасспорта/св. о рождении:" #passport>
+        <button (click)="update(7, passport.value)">Save</button>
+    </div>
+    <div class="component">
+        <p>{{telegramIdStatus}}</p>
+        <input type="text" placeholder="Введите ваш telegram Id:" #telegramId>
+        <button (click)="update(8, telegramId.value)">Save</button>
+    </div>
+</div> -->
+<header>
+    <div class="text">
+        <div class="text-inner">
+            <div class="text-text">
+                <h1>Редактирование аккаунта</h1>
+            </div>
+        </div>
+    </div>
+    <img src="/assets/img/edit-your-acc-header.png" alt="">
+</header>
+<nav>
+    <app-your-acc-nav [activeComp]='1' class="nav"></app-your-acc-nav>
+</nav>
+<div *ngIf="isLoggedIn" class="block">
+    <div class="container">
+        <div class="container-inner">
+            <div class="edits">
+                <div class="edit">
+                    <div class="edit-inner">
+                        <div class="input">
+                            <p>{{firstNameStatus}}</p>
+                            <input type="text" placeholder="Введите имя" #firstname>
+                        </div>
+                        <div class="container-a"><div class="container-inner-a"><a (click)="update(0, firstname.value)">Сохранить</a></div></div>
+                    </div>
+                    <div class="edit-inner">
+                        <div class="input">
+                            <p>{{lastNameStatus}}</p>
+                            <input type="text" placeholder="Введите фамилию" #lastName>
+                        </div>
+                        <div class="container-a"><div class="container-inner-a"><a (click)="update(1, lastName.value)">Сохранить</a></div></div>
+                    </div>
+                    <div class="edit-inner">
+                        <div class="input">
+                            <p>{{forestNameStatus}}</p>
+                            <input type="text" placeholder="Введите лесное имя" #forestname>
+                        </div>
+                        <div class="container-a"><div class="container-inner-a"><a (click)="update(2, forestname.value)">Сохранить</a></div></div>
+                    </div>
+                </div>
+                <div class="edit">
+                    <div class="edit-inner">
+                        <div class="input">
+                            <p>{{homeAdressStatus}}</p>
+                            <input type="text" placeholder="Введите ваш адресс" #homeAdress>
+                        </div>
+                        <div class="container-a"><div class="container-inner-a"><a (click)="update(3, homeAdress.value)">Сохранить</a></div></div>
+                    </div>
+                    <div class="edit-inner">
+                        <div class="input">
+                            <p>{{schoolStatus}}</p>
+                            <input type="text" placeholder="Введите место работы/учебы" #school>
+                        </div>
+                        <div class="container-a"><div class="container-inner-a"><a (click)="update(4, school.value)">Сохранить</a></div></div>
+                    </div>
+                    <div class="edit-inner">
+                        <div class="input">
+                            <p>{{classStatus}}</p>
+                            <input type="text" placeholder="Введите ваш класс(если учитесь в школе)" #class>
+                        </div>
+                        <div class="container-a"><div class="container-inner-a"><a (click)="update(5, class.value)">Сохранить</a></div></div>
+                    </div>
+                </div>
+                <div class="edit">
+                    <div class="edit-inner">
+                        <div class="input">
+                            <p>{{phoneNumberStatus}}</p>
+                            <input type="text" placeholder="Введите номер телефона" #phoneNumber>
+                        </div>
+                        <div class="container-a"><div class="container-inner-a"><a (click)="update(6, phoneNumber.value)">Сохранить</a></div></div>
+                    </div>
+                    <div class="edit-inner">
+                        <div class="input">
+                            <p>{{passportStatus}}</p>
+                            <input type="text" placeholder="Введите номер пасспорта/св. о рождении" #passport>
+                        </div>
+                        <div class="container-a"><div class="container-inner-a"><a (click)="update(7, passport.value)">Сохранить</a></div></div>
+                    </div>
+                    <div class="edit-inner">
+                        <div class="input">
+                            <p>{{telegramIdStatus}}</p>
+                            <input type="text" placeholder="Введите ваш telegram Id" #telegramId>
+                        </div>
+                        <div class="container-a"><div class="container-inner-a"><a (click)="update(8, telegramId.value)">Сохранить</a></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="/assets/img/edit-my-acc-background.jpg" alt="">
+</div>

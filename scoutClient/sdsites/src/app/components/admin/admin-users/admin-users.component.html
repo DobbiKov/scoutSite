@@ -1,0 +1,43 @@
+<div *ngIf="isLoggedIn == true" class="admin-users-requests">
+  <div class="aur-inner"> <!-- aur - admin-users-requests shrotly -->
+    <div class="aur-h1">
+      <span></span>
+      <h1>Пользователи</h1>
+    </div>
+
+    <div class="aur-main">
+      <div *ngFor="let user of users" class="user-request">
+        <div class="user-request-inner">
+          <div class="request-number">
+            <p>Пользователь №{{user.id}}</p>
+          </div>
+          <div class="request-info">
+            <p class="request-fullname">Имя: {{user.firstName}}</p>
+            <p class="request-fullname">Фамилия: {{user.lastName}}</p>
+            <p class="request-forestname">Лесное имя: {{user.forestName}}</p>
+            <p class="request-email">Почта: {{user.userName}}</p>
+          </div>
+          <div class="buttons">
+            <div class="container-a"><div class="container-inner-a"><a (click)="redirect(user.id)">Просмотреть</a></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="isLoggedIn == false">
+  <h1>Тебе сюда нельзя.</h1>
+</div>
+<!-- <div *ngIf="isLoggedIn == true && isAdmin == true">
+    <h1>Пользователи:</h1>
+    <div *ngFor="let user of users;">
+        <p>Почта: {{user.userName}}</p>
+        <p>Имя: {{user.firstName}}</p>
+        <p>Фамилия: {{user.lastName}}</p>
+        <p>Лесное имя: {{user.forestName}}</p>
+        <button (click)="redirect(user.id)">More</button>
+    </div>
+</div>
+<div *ngIf="!isLoggedIn || !isAdmin">
+    <h1>Сюда тебе нельзя.</h1>
+</div> -->

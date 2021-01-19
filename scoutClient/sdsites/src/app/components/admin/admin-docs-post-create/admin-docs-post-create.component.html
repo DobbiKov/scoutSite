@@ -1,0 +1,32 @@
+<div class="new-post">
+  <img src="/assets/img/blog-header.png" alt="">
+  <div class="text">
+  </div>
+  <div class="container">
+      <div class="container-inner">
+          <div class="container-inner-inner">
+
+            <div class="container-h1">
+              <h1>Создание поста документации</h1>
+            </div>
+
+            <div class="container-name cont-main">
+              <p>Введите название:</p>
+              <input type="text" placeholder="Введите заголовок нового поста" #name>
+            </div>
+            <div class="container-text cont-main">
+              <p>Пишите текст:</p>
+              <textarea name="text" #text></textarea>
+            </div>
+            <div class="container-a"><div class="container-inner-a"><a (click)="create(name.value, text.value)">Создать</a></div></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- <h1>Введите название:</h1>
+<input type="text" placeholder="Введие название" #name>
+<h1>Введите текст:</h1>
+<input type="text" placeholder="Введие текст" #text>
+<button (click)="create(name.value, text.value)">Create</button> -->

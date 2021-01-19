@@ -1,0 +1,53 @@
+<header>
+  <div class="text">
+      <div class="text-inner">
+        <a [routerLink]="['/admins/events/create']">Создать мероприятие</a>
+        <h1>Мероприятия</h1>
+      </div>
+  </div>
+</header>
+<div class="block">
+  <div class="block-inner">
+      <div *ngFor="let event of events;" class="event">
+          <div class="event-block">
+              <div class="event-block-20 event-block-20-date">
+                  <p>{{event.date}}</p>
+              </div>
+              <div class="event-block-80">
+
+              </div>
+          </div>
+          <div class="event-block">
+              <div class="event-block-20 event-block-20-non-date">
+
+              </div>
+              <div class="event-block-80">
+                  <p class="event-block-80-name">{{event.name}}</p>
+                  <p class="event-block-80-text">{{event.text}}</p>
+              </div>
+          </div>
+          <div class="event-block">
+            <div class="container-a"><div class="container-inner-a"><a (click)="edit(event.id)">Редактировать</a></div></div>
+            <div class="container-a"><div class="container-inner-a"><a (click)="delete(event.id)">Удалить</a></div></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- <h1>Мероприятия:</h1>
+<div *ngIf="isLoggedIn == true && isAdmin == true" class="admin-panel">
+    <a [routerLink]="['/admins/events/create']">Создать мероприятие</a>
+    <div *ngFor="let event of events;" class="event">
+        <p>Название мероприятия: {{event.name}}</p>
+        <p>Описание мероприятия: {{event.text}}</p>
+        <p>Дата проведения: {{event.date}}</p>
+        <p>Тип мероприятия: {{event.type}}</p>
+        <button (click)="edit(event.id)">Edit</button>
+        <button (click)="delete(event.id)">Delete</button>
+    </div>
+</div>
+<div *ngIf="isLoggedIn == false || isAdmin == false">
+    <h1>Тебе сюда нельзя.</h1>
+</div> -->

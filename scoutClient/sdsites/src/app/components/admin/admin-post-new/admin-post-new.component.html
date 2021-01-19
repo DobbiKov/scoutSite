@@ -1,0 +1,40 @@
+<!-- <h1>{{post.title}}</h1>
+<h2>{{post.shortText}}</h2>
+<p>{{post.text}}</p>
+<a [routerLink]="['/news']">Назад</a> -->
+<div class="new-post">
+  <img src="/assets/img/blog-header.png" alt="">
+  <div class="text">
+  </div>
+  <div class="container">
+      <div class="container-inner">
+          <div class="container-inner-inner">
+
+            <div class="container-h1">
+              <h1>Создание новости</h1>
+            </div>
+
+            <div class="container-name cont-main">
+              <p>Введите название:</p>
+              <input type="text" placeholder="Введите заголовок нового поста" #title>
+            </div>
+            <div class="container-descr cont-main">
+              <p>Введите краткое описание:</p>
+              <input type="text" placeholder="Краткое описание" #stext>
+            </div>
+            <div class="container-text cont-main">
+              <p>Пишите текст:</p>
+              <textarea name="text" #text></textarea>
+            </div>
+            <div class="container-a"><div class="container-inner-a"><a (click)="newPost(title.value, stext.value, text.value)">Создать</a></div></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- <input type="text" placeholder="Введите заголовок нового поста" #title>
+<input type="text" placeholder="Краткое описание" #stext>
+<input type="text" placeholder="Введите текст" #text>
+<button (click)="newPost(title.value, stext.value, text.value)">New Post</button> -->

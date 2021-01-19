@@ -1,0 +1,203 @@
+header{
+    position: relative;
+    display: block;
+    .text{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        .text-inner{
+            position: relative;
+            display: block;
+            width: 80%;
+            height: 100%;
+            .text-text{
+                display: flex;
+                padding-top: 10px;
+                margin: auto;
+                h1{
+                    border-top: 2px solid #000;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 900;
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
+nav{
+    display: block;
+    position: relative;
+    .nav{
+        display: block;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+} 
+.block{
+    position: relative;
+    .container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        .container-inner{
+            position: relative;
+            display: block;
+            background-color: #1CC2B8;
+            border-radius: 10px;
+            width: 80%;
+            height: 90%;
+            .edits{
+                padding-top: 10px;
+                width: 60%;
+                height: 100%;
+                margin: auto;
+                .edit{
+                    height: 33%;
+                    .edit-inner{
+                        height: 33%;
+                        display: flex;
+                        .input{
+                            display: block;
+                            width: 80%;
+                            p{
+                                font-family: 'Roboto', sans-serif;
+                                font-weight: 400;
+                                font-size: 20px;
+                            }
+                            input{
+                                outline: none;
+                                border: none;
+                                width: 80%;
+                                height: 60%;
+                                border-radius: 8px;
+                                padding-left: 10px;
+                                font-size: 15px;
+                            }
+                        }
+                        .container-a{
+                            display: flex;
+                            width: 20%;
+                            .container-inner-a{
+                                display: flex;
+                                justify-content: center;
+                                margin: auto;
+                                a{
+                                    text-align: center;
+                                    padding-left: 13px;
+                                    padding-right: 13px;
+                                    padding-top: 9px;
+                                    padding-bottom: 9px;
+                                    color: black;
+                                    background-color: white;
+                                    text-decoration: none;
+                                    font-size: 25px;
+                                    font-family: 'Roboto', sans-serif;
+                                    font-weight: 900;
+                                    transition: 0.2s;
+                                    margin: auto;
+                                }
+                                a:hover{
+                                    color: black;
+                                    background-color: rgba(0, 125, 215, 0);
+                                    cursor: pointer;
+                                    transition: 0.2s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .block{
+        .container{
+            .container-inner{
+                .edits{
+                    .edit{
+                        .edit-inner{
+                            .input{
+                                p{
+                                    font-size: 10px;
+                                }
+                            }
+                            .container-a{
+                                .container-inner-a{
+                                    a{
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px){
+    header{
+        .text{
+            .text-inner{
+                .text-text{
+                    h1{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .block{
+        .container{
+            position: relative;
+            .container-inner{
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+                .edits{
+                    width: 90%;
+                    .edit{
+                        .edit-inner{
+                            padding-top: 10px;
+                            .input{
+                                width: 100%;
+                                p{
+                                    display: block;
+                                    text-overflow: hidden;
+                                    font-size: 15px;
+                                }
+                                input{
+                                    font-size: 10px;
+                                }
+                            }
+                            .container-a{
+                                .container-inner-a{
+                                    a{
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        img{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+<div *ngIf="isLoggedIn == true" class="your-acc">
+    <div class="your-acc-header">
+        <div class="your-acc-header-h1">
+            <div class="your-acc-header-h1-inner">
+                <div class="your-acc-header-h1-inner-h1">
+                    <h1>Личный Кабинет</h1>
+                </div>
+            </div>
+        </div>
+        <img src="/assets/img/your-acc-header.png" alt="">
+    </div>
+    <nav>
+        <app-your-acc-nav [activeComp]='6' class="nav"></app-your-acc-nav>
+    </nav>
+    <div class="block">
+        <div class="block-inner">
+            <!-- <h1>Имя: {{user.firstName}}</h1>
+            <h1>Фамилия: {{user.lastName}}</h1>
+            <h1>Лесное имя: {{user.forestName}}</h1>
+
+            <h1>Место работы/учебы: {{user.school}}</h1>
+            <h1>Адресс проживания: {{user.homeAdress}}</h1>
+            <h1>Номер телефона: {{user.phoneNumber}}</h1>
+            <h1>Номер пасспорта/св. о рождении: {{user.passport}}</h1>
+            <h1>Последние посещение сайта: {{user.lastSignIn}}</h1>
+            <h1>Последние мероприятие: {{user.lastEvent}}</h1>
+            <h1>Ваш telegram id: {{user.telegramId}}</h1>
+            <button (click)="logout()">Logout</button> -->
+            <div class="container-1">
+                <div class="container-1-child">
+                    <div class="container-1-child-inner">
+                        <h2>{{user.forestName}}</h2>
+                    </div>
+                </div>
+                <div class="container-1-child">
+                    <div class="container-1-child-inner">
+                        <div class="container-1-child-inner-p"><p>Последний вход</p></div>
+                        <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.lastSignIn}}</p></div>
+                    </div>
+                </div>
+                <div class="container-1-child">
+                    <div class="container-1-child-inner">
+                        <div class="container-1-child-inner-p"><p>Последний ивент</p></div>
+                        <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.lastEvent}}</p></div>
+                    </div>
+                </div>
+                <div class="container-1-child">
+                    <div class="container-1-child-inner">
+                        <div class="container-1-child-inner-p"><p>Telegram ID</p></div>
+                        <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.telegramId}}</p></div>
+                    </div>
+                </div>
+                <div class="container-1-child">
+                    <div class="container-1-child-inner">
+                        <h2 class="logout" (click)="logout()">Выйти</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container-2">
+                <div class="container-1-child">
+                    <div class="container-1-child-inner">
+                        <h2>{{user.firstName}} {{user.lastName}}</h2>
+                    </div>
+                </div>
+                <div class="container-1-child">
+                    <div class="container-1-child-inner">
+                        <div class="container-1-child-inner-p"><p>Место работы/учебы</p></div>
+                        <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.school}}</p></div>
+                    </div>
+                </div>
+                <div class="container-1-child">
+                    <div class="container-1-child-inner">
+                        <div class="container-1-child-inner-p"><p>Домашний Адресс</p></div>
+                        <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.homeAdress}}</p></div>
+                    </div>
+                </div>
+                <div class="container-1-child">
+                    <div class="container-1-child-inner">
+                        <div class="container-1-child-inner-p"><p>Номер телефона</p></div>
+                        <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.phoneNumber}}</p></div>
+                    </div>
+                </div>
+                <div class="container-1-child">
+                    <div class="container-1-child-inner">
+                        <div class="container-1-child-inner-p"><p>Пасспорт/св. о рождении</p></div>
+                        <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.passport}}</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="isLoggedIn == false">
+    <h1>Вы не авторизованы</h1>
+</div>

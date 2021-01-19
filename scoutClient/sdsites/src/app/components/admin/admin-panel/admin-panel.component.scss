@@ -1,0 +1,67 @@
+.admin-panel{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .admin-panel-inner{
+    width: 80%;
+    display: block;
+    .link-a{
+      text-decoration: none;
+      display: inline-block;
+      width: 10%;
+      border: 1px solid #CCCCCC;
+      padding: 0 2% 0 2%;
+      text-align: center;
+      img{
+        width: 100%;
+        display: block;
+      }
+      h1{
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 22px;
+        text-align: center;
+        color: black;
+      }
+      h1.h1-purple{
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 22px;
+        text-align: center;
+        color: #714C9B;
+      }
+    }
+    .link-a:hover{
+      -webkit-box-shadow: 0px 0px 33px 0px #714C9B;
+      -moz-box-shadow: 0px 0px 33px 0px #714C9B;
+      box-shadow: 0px 0px 33px 0px #714C9B;
+      transition: 0.2s;
+    }
+    .link-a-purple:hover{
+      -webkit-box-shadow: 0px 0px 33px 0px #714C9B;
+      -moz-box-shadow: 0px 0px 33px 0px #714C9B;
+      box-shadow: 0px 0px 33px 0px #714C9B;
+      transition: 0.2s;
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .admin-panel{
+    .admin-panel-inner{
+      .link-a{
+        width: 40%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px){
+  .admin-panel{
+    .admin-panel-inner{
+      .link-a{
+        width: 100%;
+      }
+    }
+  }
+}

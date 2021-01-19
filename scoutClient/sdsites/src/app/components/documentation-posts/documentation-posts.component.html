@@ -1,0 +1,36 @@
+<!-- <div *ngFor="let post of posts;" class="posts">
+    <p>{{post.name}}</p>
+    <button (click)="redirect(post.id)">More</button>
+</div> -->
+<nav>
+    <app-your-acc-nav [activeComp]='5' class="nav"></app-your-acc-nav>
+</nav>
+<div *ngIf="isLoggedIn == true" class="docs-main">
+    <div class="header">
+        <div class="text">
+            <div class="text-inner">
+                <div class="text-inner-h1">
+                    <h1>Документация</h1>
+                </div>
+            </div>
+        </div>
+        <img src="/assets/img/docs-main-photo.png" alt="">
+    </div>
+    <div class="container">
+        <div class="container-inner">
+            <div *ngFor="let post of posts;" class="post-container">
+                <div class="post">
+                    <div class="post-inner">
+                        <h1>{{post.name}}</h1>
+                        <p>{{post.text}}</p>
+                    </div>
+                    <!-- <button (click)="redirectSeen(post.id)">Смотреть</button> -->
+                    <div class="container-a"><div class="container-inner-a"><a (click)="redirect(post.id)">Читать</a></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="isLoggedIn == false">
+    <h1>Вы не авторизованы!</h1>
+</div>

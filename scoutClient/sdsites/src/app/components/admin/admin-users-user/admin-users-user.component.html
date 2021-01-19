@@ -1,0 +1,99 @@
+<div class="your-acc">
+  <div class="block">
+      <div class="block-inner">
+          <div class="container-1">
+              <div class="container-1-child">
+                  <div class="container-1-child-inner">
+                      <h2>{{user.forestName}}</h2>
+                  </div>
+              </div>
+              <div class="container-1-child">
+                  <div class="container-1-child-inner">
+                      <div class="container-1-child-inner-p"><p>Последний вход</p></div>
+                      <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.lastSignIn}}</p></div>
+                  </div>
+              </div>
+              <div class="container-1-child">
+                  <div class="container-1-child-inner">
+                      <div class="container-1-child-inner-p"><p>Последний ивент</p></div>
+                      <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.lastEvent}}</p></div>
+                  </div>
+              </div>
+              <div class="container-1-child">
+                  <div class="container-1-child-inner">
+                      <div class="container-1-child-inner-p"><p>Telegram ID</p></div>
+                      <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.telegramId}}</p></div>
+                  </div>
+              </div>
+              <div class="container-1-child">
+                  <div class="container-1-child-inner">
+                      <h2 class="logout" (click)="redirect(id)">Ск. минимум</h2>
+                  </div>
+              </div>
+          </div>
+          <div class="container-2">
+              <div class="container-1-child">
+                  <div class="container-1-child-inner">
+                      <h2>{{user.firstName}} {{user.lastName}}</h2>
+                  </div>
+              </div>
+              <div class="container-1-child">
+                  <div class="container-1-child-inner">
+                      <div class="container-1-child-inner-p"><p>Место работы/учебы</p></div>
+                      <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.school}}</p></div>
+                  </div>
+              </div>
+              <div class="container-1-child">
+                  <div class="container-1-child-inner">
+                      <div class="container-1-child-inner-p"><p>Домашний Адресс</p></div>
+                      <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.homeAdress}}</p></div>
+                  </div>
+              </div>
+              <div class="container-1-child">
+                  <div class="container-1-child-inner">
+                      <div class="container-1-child-inner-p"><p>Номер телефона</p></div>
+                      <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.phoneNumber}}</p></div>
+                  </div>
+              </div>
+              <div class="container-1-child">
+                  <div class="container-1-child-inner">
+                      <div class="container-1-child-inner-p"><p>Пасспорт/св. о рождении</p></div>
+                      <div class="container-1-child-inner-p"><p class="container-1-child-p2">{{user.passport}}</p></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="block-2">
+    <div class="block-2-inner">
+      <h1>{{lastEventStatus}}</h1>
+      <select name="lastevent" id="" #lastEvent>
+          <option *ngFor="let event of events;" value="{{event.date}}">{{event.name}} : {{event.date}}</option>
+      </select>
+      <button (click)="saveEvent(lastEvent.value)">Save last event</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <h1>Информация об аккаунте №{{id}}</h1>
+<h1>Имя: {{user.firstName}}</h1>
+<h1>Фамилия: {{user.lastName}}</h1>
+<h1>Лесное имя: {{user.forestName}}</h1>
+
+<h1>Место работы/учебы: {{user.school}}</h1>
+<h1>Адресс проживания: {{user.homeAdress}}</h1>
+<h1>Номер телефона: {{user.phoneNumber}}</h1>
+<h1>Номер пасспорта/св. о рождении: {{user.passport}}</h1>
+<h1>Последние посещение сайта: {{user.lastSignIn}}</h1>
+<h1>Последние мероприятие: {{user.lastEvent}}</h1>
+
+<h1>{{lastEventStatus}}</h1>
+<select name="lastevent" id="" #lastEvent>
+    <option *ngFor="let event of events;" value="{{event.date}}">{{event.name}} : {{event.date}}</option>
+</select>
+<button (click)="saveEvent(lastEvent.value)">Save last event</button>
+<button (click)="redirect(id)">Scout Minimum</button> -->

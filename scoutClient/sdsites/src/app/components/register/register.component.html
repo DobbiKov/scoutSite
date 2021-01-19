@@ -1,0 +1,65 @@
+<!-- <div *ngIf="isReg == false">
+    <div class="error-div"><h2 class="error-text">{{errorText}}</h2></div>
+    <input type="text" placeholder="Email" #email>
+    <input type="text" placeholder="Имя" #firstname>
+    <input type="text" placeholder="Фамилия" #lastname>
+    <input type="text" placeholder="Лесное имя" #forestname>
+    <input type="password" placeholder="Password" #password>
+    <button (click)="register(email.value, password.value, firstname.value, lastname.value, forestname.value)">Auth</button>
+    <a [routerLink]="['/auth']">Есть аккаунт? - Авторизоватся.</a>
+</div>
+<div *ngIf="isReg == true">
+    <h1>Вы успешно зарегестрировались. Ожидайте подтверждение вашей заявки.</h1>
+    <a [routerLink]="['/']">Перейти на главную страницу.</a>
+</div> -->
+<div class="block">
+    <div class="block-inner">
+      <div class="block-inner-inner">
+        <div class="container" *ngIf="isReg">
+          <h1 class="reg-succ">Вы успешно подали заявку на регистрацию. Ожидайте, пока администратор ее подтвердит.</h1>
+          <a [routerLink]="['/']">Вернутся на главную страницу.</a>
+        </div>
+        <div class="container" *ngIf="!isReg">
+          <div class="container-20">
+            <div class="container-20-h1">
+              <h1>Регистрация</h1>
+            </div>
+          </div>
+          <div class="container-80">
+            <div class="inputs">
+
+              <div class="input">
+                <p>{{emailText}}</p>
+                <input type="text" placeholder="Email" #email>
+              </div>
+              <div class="input">
+                <p>{{firstnameText}}</p>
+                <input type="text" placeholder="Имя" #firstname>
+              </div>
+              <div class="input">
+                <p>{{lastnameText}}</p>
+                <input type="text" placeholder="Фамилия" #lastname>
+              </div>
+              <div class="input">
+                <p>{{forestnameText}}</p>
+                <input type="text" placeholder="Лесное имя" #forestname>
+              </div>
+              <div class="input">
+                <p>{{passText}}</p>
+                <input type="password" placeholder="Пароль" #password>
+              </div>
+              <div class="input">
+                <p>{{repeatpassText}}</p>
+                <input type="password" placeholder="Повторно пароль" #repeatPassword>
+              </div>
+              <div class="container-a"><div class="container-inner-a"><a (click)="register(email.value, password.value, firstname.value, lastname.value, forestname.value, repeatPassword.value)">Зарегестрироваться</a></div></div>
+              <div class="register">
+                  <a [routerLink]="['/auth']">Имеется аккаунт? - Авторизоваться.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="/assets/img/register-background.png" alt="">
+</div>

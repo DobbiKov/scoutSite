@@ -1,0 +1,39 @@
+<div *ngIf="isLoggedIn == true" class="docs-main">
+  <div class="header">
+      <div class="text">
+          <div class="text-inner">
+              <div class="text-inner-h1">
+                  <a [routerLink]="['/admins/docs/create']">Создать новый раздел</a>
+                  <h1>Документация</h1>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="container-inner">
+          <div *ngFor="let doc of docs;" class="post-container">
+              <div class="post">
+                  <div class="post-inner">
+                      <h1>{{doc.name}}</h1>
+                  </div>
+                  <!-- <button (click)="redirectSeen(post.id)">Смотреть</button> -->
+                  <div class="container-a"><div class="container-inner-a"><a (click)="redirect(doc.id)">Далее</a></div></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div *ngIf="isLoggedIn == false">
+  <h1>Вы не авторизованы!</h1>
+</div>
+<!-- <div *ngIf="isLoggedIn == true">
+    <a [routerLink]="['/admins/docs/create']"><h1>Создать новый раздел</h1></a>
+
+    <h1>Документация</h1>
+    <div *ngFor="let doc of docs;">
+        <button (click)="redirect(doc.id)">{{doc.name}}</button>
+    </div>
+</div>
+<div *ngIf="isLoggedIn == false">
+    <h1>Вы не авторизованы!</h1>
+</div> -->

@@ -1,0 +1,46 @@
+<div *ngIf="isLoggedIn == true && canAcceptUsers == true" class="admin-users-requests">
+  <div class="aur-inner"> <!-- aur - admin-users-requests shrotly -->
+    <div class="aur-h1">
+      <span></span>
+      <h1>Заявки на регистрацию</h1>
+    </div>
+
+    <div class="aur-main">
+      <div *ngFor="let user of users" class="user-request">
+        <div class="user-request-inner">
+          <div class="request-number">
+            <p>Заявка №{{user.id}}</p>
+          </div>
+          <div class="request-info">
+            <p class="request-fullname">{{user.firstName}} {{user.lastName}}</p>
+            <p class="request-forestname">{{user.forestName}}</p>
+            <p class="request-email">{{user.userName}}</p>
+          </div>
+          <div class="buttons">
+            <div class="container-a"><div class="container-inner-a"><a (click)="accept(user.id)">Принять</a></div></div>
+            <div class="container-a"><div class="container-inner-a"><a (click)="reject(user.id)">Отклонить</a></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="isLoggedIn == false || canAcceptUsers == false">
+  <h1>Тебе сюда нельзя.</h1>
+</div>
+
+
+<!-- <div *ngIf="isLoggedIn == true && canAcceptUsers == true">
+    <h1>Заявки на регистрацию:</h1>
+    <div *ngFor="let user of users">
+        <p>{{user.firstName}}</p>
+        <p>{{user.lastName}}</p>
+        <p>{{user.forestName}}</p>
+        <p>{{user.userName}}</p>
+        <button (click)="accept(user.id)">Принять</button>
+        <button (click)="reject(user.id)">Отклонить</button>
+    </div>
+</div>
+<div *ngIf="isLoggedIn == false || isAdmin == false">
+    <h1>Тебе сюда нельзя.</h1>
+</div> -->

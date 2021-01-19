@@ -1,0 +1,36 @@
+<div *ngIf="isLoggedIn == true && isAdmin == true" class="admin-panel">
+  <div class="admin-panel-inner">
+    <a class="link-a link-a-purple" [routerLink]="['/admins/docs']">
+      <img src="/assets/img/docs.png" alt="">
+      <h1 class="h1-purple">Документация</h1>
+    </a>
+
+    <a class="link-a" [routerLink]="['/admins/events']">
+      <img src="/assets/img/events.png" alt="">
+      <h1>Мероприятия</h1>
+    </a>
+
+    <a class="link-a" [routerLink]="['/admins/users']">
+      <img src="/assets/img/users.png" alt="">
+      <h1>Пользователи</h1>
+    </a>
+
+    <a class="link-a" [routerLink]="['/admins/news']">
+      <img src="/assets/img/news.png" alt="">
+      <h1>Новости</h1>
+    </a>
+    <a class="link-a" [routerLink]="['/admins/requests']">
+      <img src="/assets/img/request.png" alt="">
+      <h1>Заявки на рег.</h1>
+    </a>
+  </div>
+</div>
+<div *ngIf="isLoggedIn == false || isAdmin == false">
+    <h1>Тебе сюда нельзя.</h1>
+</div>
+
+<!-- <a [routerLink]="['/admins/requests']">Заявки на регистрацию</a>
+<a [routerLink]="['/admins/news']">Новости</a>
+<a [routerLink]="['/admins/users']">Пользователи</a>
+<a [routerLink]="['/admins/events']">Мероприятия</a>
+<a [routerLink]="['/admins/docs']">Документация</a> -->

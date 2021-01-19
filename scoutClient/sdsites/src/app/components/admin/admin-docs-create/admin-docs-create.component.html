@@ -1,0 +1,30 @@
+<div class="new-post">
+  <img src="/assets/img/blog-header.png" alt="">
+  <div class="text">
+  </div>
+  <div class="container">
+      <div class="container-inner">
+          <div class="container-inner-inner">
+
+            <div class="container-h1">
+              <h1>Создание раздела</h1>
+            </div>
+
+            <div class="container-name cont-main">
+              <p>Введите название:</p>
+              <input type="text" placeholder="Введите заголовок нового раздела" #name>
+            </div>
+            <div class="container-a"><div class="container-inner-a"><a (click)="create(name.value)">Создать</a></div></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--
+<div class="docs-create">
+    <div class="inner">
+        <h1>Создание нового раздела.</h1>
+        <input type="text" placeholder="Введите название" #name>
+        <button (click)="create(name.value)">Create</button>
+    </div>
+</div> -->

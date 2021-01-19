@@ -1,0 +1,50 @@
+<div class="new-post">
+  <img src="/assets/img/blog-header.png" alt="">
+  <div class="text">
+  </div>
+  <div class="container">
+      <div class="container-inner">
+          <div class="container-inner-inner">
+
+            <div class="container-h1">
+              <h1>Редактирование мероприятия</h1>
+            </div>
+
+            <div class="container-name cont-main">
+              <p>Введите название:</p>
+              <input type="text" placeholder="Введите название мероприятия" #name>
+              <p class="now">{{ev.name}}</p>
+            </div>
+            <div class="container-type cont-main">
+              <p>Введите тип мероприятия:</p>
+              <input type="text" placeholder="Введите тип мероприятия" #type>
+              <p class="now">{{ev.type}}</p>
+            </div>
+            <div class="container-date cont-main">
+              <p>Введите дату проведения мероприятия в формате 01.09.1983:</p>
+              <input type="text" placeholder="Введите дату проведения мероприятия в формате 01.09.1983" #date>
+              <p class="now">{{ev.date}}</p>
+            </div>
+            <div class="container-descr cont-main">
+              <p>Введите описание мероприятия:</p>
+              <textarea name="text" #text></textarea>
+              <p class="now">{{ev.text}}</p>
+            </div>
+            <div class="container-a"><div class="container-inner-a"><a (click)="update(name.value, text.value, type.value, date.value)">Обновить</a></div></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<!-- <p>В данный момент: {{ev.name}}</p>
+<input type="text" placeholder="Введите название мероприятия" #name>
+<p>В данный момент: {{ev.text}}</p>
+<input type="text" placeholder="Введите описание мероприятия" #text>
+<p>В данный момент: {{ev.type}}</p>
+<input type="text" placeholder="Введите тип мероприятия" #type>
+<p>В данный момент: {{ev.date}}</p>
+<input type="text" placeholder="Введите дату проведения мероприятия в формате 01.09.1983" #date>
+<button (click)="update(name.value, text.value, type.value, date.value)">Update</button> -->

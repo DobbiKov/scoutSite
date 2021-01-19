@@ -1,0 +1,85 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+  }
+  
+html {
+font-size: 14px;
+}
+@media (min-width: 768px) {
+html {
+    font-size: 16px;
+}
+}
+
+.box-shadow {
+box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    nav{
+        display: block;
+        width: 80%; 
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            text-decoration: none;
+            .logo-div{
+                display: flex;
+                justify-content: center;
+                .logo-div-inner{
+                    margin: auto;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        .scout-logo-img{
+                            width: 116px;
+                            height: 68px;
+                        }
+                    }
+                }
+            }
+            .buttons-div{
+                display: flex;
+                justify-content: center;
+                .buttons-div-inner{
+                    margin: auto;
+                    .buttons-div-a{
+                        padding-left: 33px;
+                        display: inline-block;
+                    }
+                    @media screen and (max-width: 575px){
+                        .buttons-div-a{
+                            padding-left: 33px;
+                            display: block;
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        padding-bottom: 5px;
+                        transition: 0.2s;
+                        font-size: 15px;
+                    }
+                    a:hover{
+                        cursor: pointer;
+                        color:  #29DDD2;
+                        transition: 0.2s;
+                    }
+                    .active{
+                        border-bottom: 3px solid #29DDD2;
+                        color: #29DDD2;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<nav>
+    <app-your-acc-nav [activeComp]='4' class="nav"></app-your-acc-nav>
+</nav>
+<header>
+    <div class="text">
+        <div class="text-inner">
+            <div class="text-h1">
+                    <h1>Мероприятия</h1>
+            </div>
+        </div>
+    </div>
+    <img src="/assets/img/now-events-header.png" alt="">
+</header>
+<div class="block">
+    <div class="block-inner">
+        <div *ngFor="let event of events;" class="event">
+            <div class="event-block">
+                <div class="event-block-20 event-block-20-date">
+                    <p>{{event.date}}</p>
+                </div>
+                <div class="event-block-80">
+
+                </div>
+            </div>
+            <div class="event-block">
+                <div class="event-block-20 event-block-20-non-date">
+
+                </div>
+                <div class="event-block-80">
+                    <p class="event-block-80-name">{{event.name}}</p>
+                    <p class="event-block-80-text">{{event.text}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <h1>Ближайшие мероприятия:</h1>
+<div *ngFor="let event of events;" class="event">
+    <p>{{event.name}}</p>
+    <p>{{event.text}}</p>
+    <p>{{event.date}}</p>
+</div> -->

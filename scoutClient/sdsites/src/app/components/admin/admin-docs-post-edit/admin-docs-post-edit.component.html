@@ -1,0 +1,35 @@
+<div class="new-post">
+  <img src="/assets/img/blog-header.png" alt="">
+  <div class="text">
+  </div>
+  <div class="container">
+      <div class="container-inner">
+          <div class="container-inner-inner">
+
+            <div class="container-h1">
+              <h1>Создание поста документации</h1>
+            </div>
+
+            <div class="container-name cont-main">
+              <p>Введите название:</p>
+              <input type="text" placeholder="Введите заголовок нового поста" #name>
+              <p class="now">В данный момент: {{post.name}}</p>
+            </div>
+            <div class="container-text cont-main">
+              <p>Пишите текст:</p>
+              <textarea name="text" #text></textarea>
+              <p class="now">В данный момент: {{post.text}}</p>
+            </div>
+            <div class="container-a"><div class="container-inner-a"><a (click)="update(name.value, text.value)">Обновить</a></div></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- <div>
+    <p>В данный момент: {{post.name}}</p>
+    <input type="text" placeholder="Введите новое имя" #name>
+    <p>В данный момент: {{post.text}}</p>
+    <input type="text" placeholder="Введите новый текст" #text>
+    <button (click)="update(name.value, text.value)">Update</button>
+</div> -->
