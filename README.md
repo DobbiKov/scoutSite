@@ -11,7 +11,7 @@ Developer: [Roman Zapotockiy](https://t.me/dobbikov)
   - ASP NET Core
   - MySQL
   - Entity Framework Core
-3. Site
+2. Site
   - Node JS
   - npm
   - Angular 10
